@@ -1,0 +1,17 @@
+# robots.txt for Portfolio
+User-agent: *
+Allow: /
+Allow: /src/
+Allow: /index.html
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /draft/
+
+# Sitemap location
+Sitemap: https://karol-przygoda.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 10 

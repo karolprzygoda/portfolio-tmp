@@ -3,9 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Karol Przygoda is a Software Engineer with expertise in web development, specializing in React ecosystem technologies. Explore this portfolio to see his projects and skills."
+    />
+    <meta
+      name="keywords"
+      content="Portfolio, Software Engineer, Web Developer, Frontend Developer, Full Stack Developer, JavaScript, TypeScript, Next.js, React, Node.js,"
+    />
+    <meta name="author" content="Karol Przygoda" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph meta tags   -->
+    <meta property="og:title" content="Karol Przygoda - temporary portfolio" />
+    <meta
+      property="og:description"
+      content="Karol Przygoda is a Software Engineer with expertise in web development, specializing in React ecosystem technologies. Explore this portfolio to see his projects and skills."
+    />
+    <meta property="og:image" content="https://karolprzygoda.com/open-graph.png" />
+    <meta property="og:url" content="https://karolprzygoda.com" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Card Meta Tags  -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content="Karol Przygoda - temporary portfolio" />
+    <meta
+      name="twitter:description"
+      content="Karol Przygoda is a Software Engineer with expertise in web development, specializing in React ecosystem technologies. Explore this portfolio to see his projects and skills."
+    />
+    <meta name="twitter:image" content="https://karolprzygoda.com/open-graph.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/reset.css" />
+    <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.js"></script>
-    <title>Vite App</title>
+    <!-- Prevents theme blink-->
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.dataset.theme = theme;
+    </script>
+    <title>Karol Przygoda - temporary portfolio</title>
+    <!-- Prevent Best Practises Error-->
+    <style>
+      :where(h1) {
+        margin-block: 0.67em;
+        font-size: 2em;
+      }
+    </style>
   </head>
   <body>
+    <div class="app">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol
+          id="theme-toggle-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+          <path d="M12 3l0 18"></path>
+          <path d="M12 9l4.65 -4.65"></path>
+          <path d="M12 14.3l7.37 -7.37"></path>
+          <path d="M12 19.6l8.85 -8.85"></path>
+        </symbol>
+        <symbol
+          id="arrow-right-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 7h10v10" />
+          <path d="M7 17 17 7" />
+        </symbol>
+        <symbol
+          id="file-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+          <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+          <path d="M10 9H8" />
+          <path d="M16 13H8" />
+          <path d="M16 17H8" />
+        </symbol>
+      </svg>
+      <header>
+        <button class="theme-toggle" id="theme-toggle">
+          <svg class="icon" width="24" height="24">
+            <use href="#theme-toggle-icon"></use>
+          </svg>
+          <span class="sr-only">Toggle theme button</span>
+        </button>
+      </header>
+      <div class="portfolio-container">
+        <section class="introduction">
+          <div class="section-title animated">
+            <h1>
+              <span>Karol Przygoda&nbsp;</span>
+              <span>[ Software Engineer ]</span>
+            </h1>
+            <span class="reference">[ 1 ]</span>
+          </div>
+          <div class="introduction__description animated">
+            <div>
+              Karol is a Junior Software Engineer specializing in React ecosystem technologies. He
+              actively builds his skills through hands-on projects, focusing on clean code,
+              intuitive user interfaces, and modern development practices. While React is his
+              primary focus, he is also open and eager to develop his skills in other ecosystems
+              such as Vue, Angular, and beyond. He is currently seeking his first opportunity in the
+              tech industry, where he can continue to grow and contribute as part of a collaborative
+              team.
+            </div>
+            <div>
+              My portfolio website is currently under construction — in the meantime, feel free to
+              connect with me on
+              <a
+                href="https://www.linkedin.com/in/karol-przygoda/"
+                target="_blank"
+                class="introduction__link"
+                >LinkedIn</a
+              >, reach out via email at
+              <a href="mailto:karolprzygodakontakt@gmail.com" class="introduction__link"
+                >karolprzygodakontakt@gmail.com</a
+              >, or explore my recent projects on
+              <a href="https://github.com/karolprzygoda" target="_blank" class="introduction__link"
+                >Github</a
+              >.
+            </div>
+            <div class="resume-container">
+              <a href="/karol-przygoda-resume-eng.pdf" target="_blank" rel="noopener noreferrer">
+                <svg width="12" height="12">
+                  <use href="#file-icon"></use>
+                </svg>
+                <span>resume.eng</span>
+              </a>
+              <a href="/karol-przygoda-resume-eng.pdf" target="_blank" rel="noopener noreferrer">
+                <svg width="12" height="12">
+                  <use href="#file-icon"></use>
+                </svg>
+                <span>resume.pl</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="details animated">
+          <div class="details__contact">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <span class="reference">[ 2 ]</span>
+            </div>
+            <div class="list">
+              <a href="https://www.linkedin.com/in/karol-przygoda/" target="_blank">
+                <span class="media linkedin">LinkedIn</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="mailto:karolprzygodakontakt@gmail.com">
+                <span class="media mail">Mail</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="https://x.com/karolprzygoda_" target="_blank">
+                <span class="media twitter">Twitter/X</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/nudnykarol/" target="_blank">
+                <span class="media instagram">Instagram</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="details__separator"></div>
+          <div class="details__projects">
+            <div class="section-title">
+              <h2>Projects</h2>
+              <span class="reference">[ 3 ]</span>
+            </div>
+            <div class="list">
+              <a href="https://github.com/karolprzygoda/code-arena" target="_blank">
+                <span>code-arena</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="https://github.com/karolprzygoda/cinemawave" target="_blank">
+                <span>cinemawave</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="https://github.com/karolprzygoda/chat-persona" target="_blank">
+                <span>chat-persona</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+              <a href="https://github.com/karolprzygoda/Mp3Player" target="_blank">
+                <span>mp3-player</span>
+                <svg width="12" height="12">
+                  <use href="#arrow-right-icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <a class="easter-egg" href="https://www.youtube.com/watch?v=HyWYpM_S-2c" target="_blank">
+          <span>)</span>
+          <span class="sr-only">Easter egg</span>
+        </a>
+      </footer>
+    </div>
   </body>
 </html>

@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "@fontsource/domine": "^5.2.6"
   }
 }

@@ -1,0 +1,254 @@
+@import "@fontsource/domine/latin-400.css";
+@import "@fontsource/domine/latin-500.css";
+
+:root {
+  color-scheme: light dark;
+
+  --background-color: light-dark(white, black);
+  --text-color: light-dark(black, #c8c8c8);
+  --text-bold-color: light-dark(black, white);
+  --text-color-hover: light-dark(#6b6c6e, white);
+
+  --linkedin: #0077b5;
+  --mail: #d14836;
+  --twitter: #000;
+  --instagram: #e1306c;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 0.8125rem;
+  line-height: 1.1rem;
+  font-family: "Domine", serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--text-color-hover);
+}
+
+header,
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.app {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.animated {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
+}
+
+@starting-style {
+  .animated {
+    filter: blur(6px);
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+
+.introduction__link:hover {
+  text-decoration: underline;
+}
+
+.reference {
+  text-wrap: nowrap;
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+
+.theme-toggle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: transparent;
+  color: var(--text-bold-color);
+  border: none;
+  cursor: pointer;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 520px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--text-bold-color);
+}
+
+.introduction__description {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--text-color);
+  transition-delay: 100ms;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1.25rem;
+  gap: 1.5rem;
+  transition-delay: 150ms;
+}
+
+.list {
+  margin-top: 0.375rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.resume-container {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  justify-content: space-between;
+}
+
+.resume-container a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.details__separator {
+  display: none;
+  width: 1px;
+  height: 3rem;
+  align-self: center;
+  background-color: var(--text-color);
+}
+
+.introduction__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.media::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  margin-right: 4px;
+  aspect-ratio: 1/1;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.linkedin::before {
+  background-color: var(--linkedin);
+  border-color: var(--linkedin);
+}
+
+.mail::before {
+  background-color: var(--mail);
+  border-color: var(--mail);
+}
+
+.twitter::before {
+  background-color: var(--twitter);
+  border-color: light-dark(var(--twitter), #fff);
+}
+
+.instagram::before {
+  background-color: var(--instagram);
+  border-color: var(--instagram);
+}
+
+.easter-egg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .details {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  .details__separator {
+    display: block;
+  }
+
+  .details > div:not(.details__separator) {
+    flex: 1;
+  }
+}

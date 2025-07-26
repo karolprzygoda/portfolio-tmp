@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Use a more readable tab size */
+  -moz-tab-size: 4;
+  tab-size: 4;
+  /* Use the user's configured `serif` font-feature-settings by default */
+  font-feature-settings: normal;
+  /* Use the user's configured `sans` font-variation-settings by default */
+  font-variation-settings: normal;
+  /* Disable tap highlights on iOS */
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
