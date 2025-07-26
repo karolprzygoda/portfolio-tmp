@@ -11,7 +11,7 @@ Disallow: /temp/
 Disallow: /draft/
 
 # Sitemap location
-Sitemap: https://karol-przygoda.com/sitemap.xml
+Sitemap: https://karol-przygoda.vercel.app/sitemap.xml
 
 # Crawl-delay for all bots
 Crawl-delay: 10 
